@@ -66,6 +66,7 @@ USER jovyan
 
 RUN pip install -r /tmp/environment.txt
 RUN pip install download nbclean mapboxgl hydrofunctions
+RUN pip install git+https://github.com/earthlab/earthpy.git@ad143d31ab4386eba93080a1803fea291d8ed684
 
 # ------------------------------------------------------------------------------
 # Clean up
