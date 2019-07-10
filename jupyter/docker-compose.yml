@@ -1,0 +1,10 @@
+version: '2.3'
+services:
+    clouds:
+        image: "samueljackson/jupyter:latest"
+        volumes:
+            - $WORK_DIR:/work
+            - $DATA_DIR:/data
+        ports:
+            - 9999:8888
+        command: "jupyter lab --ip='0.0.0.0' --port=8888 --no-browser --allow-root --LapApp.token='' --NotebookApp.token=''"
